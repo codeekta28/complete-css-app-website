@@ -1,0 +1,2 @@
+I made this website first individually but it had some issues regarding responsiveness so i am making it again 
+according to video to understand what i did wrong

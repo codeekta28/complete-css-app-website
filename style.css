@@ -1,0 +1,488 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+    /* margin: 0px;
+    padding: 0px; */
+}
+
+:root {
+    --primary: #faf8f8;
+    ;
+    --dark: #333;
+    --light: #fff;
+    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+body {
+    margin: 0px;
+         min-height: 100vh; 
+}
+
+.container {
+    display: grid;
+}
+
+h1, h2, h3 {
+    margin: 11px;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+p {
+    margin: 8px;
+    line-height: 23px;
+    color: gray;
+}
+
+/* main menu section */
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    /* border: 2px solid; */
+    background: var(--primary);
+}
+
+#logo img {
+    height: 3rem;
+    padding: 9px 2px;
+}
+
+#logo a {
+    text-decoration: none;
+}
+
+#main-menu {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* border: 2px solid;  */
+    grid-gap: 2rem;
+}
+
+#main-menu li {
+    text-align: center;
+}
+
+#main-menu li a {
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    transition: .3s all;
+}
+
+#main-menu li a:hover {
+    color: black;
+}
+
+.hoverline::after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: black;
+    transition: width .3;
+}
+
+.hoverline:hover::after, a.home:link::after {
+    width: 100%;
+}
+
+/* header section */
+
+#header {
+    background: center / cover no-repeat url("/image/headerbg.jpg");
+    height: 41rem;
+    display: flex;
+    align-items: center;
+}
+
+#content {
+    background: rgb(80, 79, 79);
+    color: white!important;
+    opacity: 0.8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    border: 2px solid;
+    border-radius: 49px;
+}
+
+#content h1 {
+    font-size: 35px;
+}
+
+#content p {
+    color: white;
+}
+
+.blue {
+    color: rgb(19 6 98);
+    font-size: 42px;
+}
+
+/* feature section */
+
+#feature-section {
+    text-align: center;
+}
+
+#feature-section h1 {
+    font-size: 33px;
+    margin-top: 30px;
+}
+
+#features {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(200px, 1fr));
+    margin: 2rem 36rem;
+    grid-gap: 4rem;
+}
+
+.font {
+    color: rgb(9, 88, 99);
+}
+
+/* core feature section */
+
+#blurred {
+    height: 34rem;
+    position: relative;
+    color: white;
+}
+
+#blurred::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: center / cover no-repeat url("/image/corebg.jpg");
+    filter: blur(5px);
+    z-index: -1;
+}
+
+/* #blurred  span {
+    position:relative;
+    z-index:1;
+  } */
+
+#corecontent {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 34rem;
+}
+
+#corecontent img {
+    height: 30rem;
+}
+
+#core-features-list h2 {
+    font-size: 30px;
+}
+
+#core-features-list ul {
+    list-style: none;
+    font-size: 20px;
+    padding-left: 14px;
+}
+
+#core-features-list ul li::before {
+    content: "✓  ";
+    font-weight: bold;
+}
+
+/* About page */
+
+#about-us {}
+
+.about-main-heading, .services-main-heading,.contact-main-heading {
+    border: 2px solid;
+    background: black;
+    color: white;
+}
+
+.about-main-heading h1, .services-main-heading h1,.contact-main-heading h1 {
+    margin-left: 21rem;
+}
+
+.about-inner-content {
+    text-align: center;
+    padding: 10px 6rem;
+    margin: 0 auto;
+}
+
+.sky-blue {
+    color: skyblue;
+    font-size: 29px;
+}
+
+.inner-content h2 {
+    margin-top: 33px;
+}
+
+/* services page */
+
+.services-offers {
+    text-align: center;
+}
+
+.services-offer-list {
+    width: 60rem;
+    margin: 39px auto;
+    background-color: black;
+}
+
+.inner-offers {
+    color: white;
+    padding: 4px 3rem;
+}
+
+.inner-offers p {
+    color: white;
+    line-height: 27px;
+}
+
+.inner-offers:hover {
+    background-color: rgb(51, 180, 231);
+}
+
+/* contact us page */
+
+
+#formParent{
+    min-height: 58vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid; */
+}
+#contactForm{
+    border: 2px solid black;
+    min-height: 46vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 4px;
+    min-width: 54rem;
+    background: rgb(61, 60, 60);
+    color: white;
+}
+#contactForm input,#contactForm textarea{
+    /* border: 2px solid red; */
+    width: 36rem;
+    margin: 7px auto;
+    padding: 5px;
+}
+#contactForm textarea{
+    margin-bottom: 0px;
+}
+.formBtn{
+    width: 36rem;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+
+/* footer 1 section */
+
+.footer1 {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    background-color: rgb(65, 64, 64);
+}
+
+.contactUs ul {
+    list-style: none;
+    padding-left: 1px;
+    text-align: -webkit-match-parent;
+    line-height: 35px;
+    font-size: 19px;
+}
+
+.aboutUs {
+    width: 400px;
+}
+
+.aboutUs p {
+    color: white;
+    font-size: 18px;
+    line-height: 29px;
+}
+
+.newsletter {
+    width: 300px;
+}
+
+.newsletter input {
+    margin-top: 2rem;
+    padding: 6px;
+}
+
+.btn {
+    background-color: black;
+    color: white;
+    padding: 8px;
+    font-size: 15px;
+}
+
+
+
+/* footer2 */
+
+.footer2 {
+    text-align: center;
+    background-color: rgb(37, 141, 134);
+    /* height: 2rem; */
+    color: white;
+    font-size: 16px;
+    /* padding: 3rem; */
+    padding: 12px 12px;
+    font-weight: bold;
+    text-transform: capitalize;
+    position: sticky;
+}
+.footer {
+    background: var(--primary);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    background-color: rgb(65, 64, 64);
+    color: white;
+}
+.footer h3 {
+    font-size: 25px;
+}
+
+/* media query */
+
+/* @media only screen and (max-width:300px) {
+    body {
+        background-color: red;
+    }
+    .footer1{
+        grid-template-columns: 1fr;
+    }
+    .footer{
+        margin: 0 auto;
+    }
+} */
+
+@media (min-width: 300px) and (max-width:500px) 
+{
+    body {
+        background-color: blue;
+    }
+    nav {
+        flex-direction: column;
+    }
+    #main-menu {
+        grid-template-columns: 1fr;
+        padding: 0px;
+    }
+    #blurred {
+        height: 78rem;
+    }
+    #corecontent {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 78rem;
+    }
+    .about-main-heading h1 {
+        text-align: center;
+        margin: 0px;
+    }
+    .services-main-heading h1 {
+        text-align: center;
+        margin: 0;
+        padding: 1rem;
+    }
+    .footer1 {
+        grid-template-columns: 1fr;
+    }
+    .footer {
+        margin: 0 auto;
+        /* display: fixed; */
+    }
+}
+
+@media (min-width: 500px) and (max-width:800px) {
+    body {
+        background-color: yellow;
+    }
+    nav {
+        flex-direction: column;
+    }
+    #main-menu {
+        grid-template-columns: 1fr;
+        padding: 0px;
+    }
+    #blurred {
+        border: 8px solid white;
+        height: 78rem;
+    }
+    #corecontent {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 78rem;
+    }
+    .services-main-heading h1 {
+        text-align: center;
+        margin: 0;
+        padding: 1rem;
+    }
+    .footer1 {
+        grid-template-columns: 1fr;
+    }
+    .footer {
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 800px) and (max-width:1200px)
+{
+    body {
+        background-color: green;
+    } 
+
+nav{
+      flex-direction: column;
+    }
+
+#main-menu{
+        grid-template-columns: 1fr;
+    }
+    #blurred {
+        border: 8px solid white;
+        height: 78rem;
+    }
+    #corecontent {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 78rem;
+    }
+    .services-main-heading h1 {
+        text-align: center;
+        margin: 0;
+        padding: 1rem;
+    }
+    .footer1 {
+        grid-template-columns: 1fr;
+    }
+    .footer {
+        margin: 0 auto;
+    }
+ } 

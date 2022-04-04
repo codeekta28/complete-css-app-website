@@ -1,0 +1,48 @@
+First of all everything will be inside container
+Nav menu
+    --left side logo
+    --Home,About,services,contact (background white color black)
+header section
+    --heading and 1 line discription with background image.The background of heading and discription contain gray background.
+
+Feature Section
+      --heading h2 bold black
+      --subheading p gray
+      --features div
+         --feature sub div
+            --font
+            --h3 black bold
+            --discription p gray
+core feature section
+       --faded background
+       --left iphone image
+       --right core features heading with unoudred list tick sign
+
+footer1(background gray)
+      --contact footer
+         phone number
+         mail
+         address
+      --About us footer
+         discription
+      
+      --newsletter footer
+         one line
+         inputbox with signup button in same line
+footer2(background blue)
+       --simple copyright
+
+About Page
+   -- one strip black background white color
+   --h2 who(skyblue color) We Are(bold capitalize)
+   --p1 p2 after that underline and repeat same
+services Page
+   --one strip black background white color
+   --h2 see(skyblue color) What we offer(bold capitalize)
+   --3 divs
+      ---h3 and p black background white color hover(skyblue)
+contact us Page
+   --one strip black background white color
+   --h2 Get(skyblue color) In Touch(bold capitalize)
+   --p one line statement
+   --form inside label with input flex direction column text align center
